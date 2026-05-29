@@ -45,7 +45,7 @@ for i in range(9):
     rColumn = i % 3 # 0 1 2 mv 0 1 2 mv ...
     temp.grid(row=nRow, column=rColumn, sticky=N+S+E+W) #sticky="nsew"로 사용해도 결과는 동일.
     # 중요 sticky #
-    # 위에서 rowconfigure로 행/ 열의 공간을 확보했더라고, sticky 속성을 설정하지 않으면 위젯은 그 커진 공간의 중앙에만 머물러 있음.
+    # 위에서 rowconfigure로 행/ 열의 공간을 확보했더라도, sticky 속성을 설정하지 않으면 위젯은 그 커진 공간의 중앙에만 머물러 있음.
     # sticky="nesw"(North, East, South, West)를 버튼 배치기 추가하면, 버튼이 해당 칸 전체를 꽉 채우며 늘어나게 됨
     Button_list.append(temp)
 window.mainloop()
