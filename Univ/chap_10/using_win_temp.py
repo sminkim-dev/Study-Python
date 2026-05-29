@@ -1,11 +1,15 @@
+# start 26.05.22 13:00
 # 섭씨와 화씨를 상호 변환하는 프로그램을 작성하시오.
 # - 섭씨 -> 화씨 : F = C * 9 / 5 + 32
 # - 화씨 -> 섭씨 : C = (F - 32) * 5 / 9
 # mac dark mode와 tkinter의 호환성 및 구 버전으로 인한 코드 구현은 가능하나 실행이 어려운 상황. 육안으로 안보임. 크기 및 색상 변경해도 동일
 # 해당 문제는 windows 환경에서 실습하는게 나을 것 같음.
+# --------26.05.22 23:26------- # 
+# 해결. mac 내부 python 버전이 너무 오래되서 tkinter 자체는 존재하지만, 호환성 문제가 생겨서 python 3.12 버전을 추가 다운 받아서 해결함.
+# 추가로 brew로 다운 받은 3.12 버전은 tkinter 지원을 하지 않아서 동작하지 않음.
 import tkinter
 
-
+# font 색상을 추가로 넣은 이유는 호환성 문제로 보이지 않던 문제가 단순 배경 문제인가 싶어 확인하기 위함.
 def celsius_to_fahrenheit():
     celsius = float(celsius_box.get())
     fahrenheit = celsius * 9 / 5 + 32
