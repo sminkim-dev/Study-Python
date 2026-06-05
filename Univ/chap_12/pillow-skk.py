@@ -2,7 +2,7 @@ from PIL import Image , ImageTk
 import tkinter as tk
 import numpy as np
 
-img = Image.open("/Users/ruin/Dev/Python/Univ/chap_12/haku.jpg.webp")
+img = Image.open("/your file address/haku.jpg.webp")
 
 # console 에 image 정보 출력
 print(img.size, img.mode, img.format)
